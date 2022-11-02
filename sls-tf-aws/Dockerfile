@@ -1,4 +1,5 @@
 FROM node:18-alpine
+ARG TARGETARCH
 
 RUN apk add --no-cache curl aws-cli jq gettext moreutils git bash terraform --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community
 # serverless part
