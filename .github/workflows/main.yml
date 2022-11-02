@@ -24,6 +24,11 @@ jobs:
     steps:
       # setup Docker buld action
       - uses: actions/checkout@v3
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+        with:
+          platforms: 'arm64,arm,amd64'
       
       - name: Set up Docker Buildx
         id: buildx
